@@ -23,7 +23,7 @@ For example, suppose that you create a table with 5 read capacity units and 5 wr
 
 If your application reads or writes larger items \(up to the DynamoDB maximum item size of 400 KB\), it will consume more capacity units\.
 
-If your read or write requests exceed the throughput settings for a table, DynamoDB can *throttle* that request\. DynamoDB can also throttle read requests exceeds for an index\. Throttling prevents your application from consuming too many capacity units\. When a request is throttled, it fails with an HTTP 400 code \(`Bad Request`\) and a `ProvisionedThroughputExceededException`\. The AWS SDKs have built\-in support for retrying throttled requests \(see [Error Retries and Exponential Backoff](Programming.Errors.md#Programming.Errors.RetryAndBackoff)\), so you do not need to write this logic yourself\.
+If your read or write requests exceed the throughput settings for a table, DynamoDB can *throttle* that request\. DynamoDB can also throttle read requests for an index\. Throttling prevents your application from consuming too many capacity units\. When a request is throttled, it fails with an HTTP 400 code \(`Bad Request`\) and a `ProvisionedThroughputExceededException`\. The AWS SDKs have built\-in support for retrying throttled requests \(see [Error Retries and Exponential Backoff](Programming.Errors.md#Programming.Errors.RetryAndBackoff)\), so you do not need to write this logic yourself\.
 
 You can use the AWS Management Console to monitor your provisioned and actual throughput, and to modify your throughput settings if necessary\.
 
